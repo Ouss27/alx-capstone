@@ -19,5 +19,7 @@ class Product(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        ordering = ['id']  # Default ordering by ID
         # Display name, category, and stock quantity in a readable format
         return f"{self.name} (Category: {self.category}, Stock: {self.stock_quantity})"
+    
