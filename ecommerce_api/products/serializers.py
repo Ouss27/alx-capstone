@@ -15,4 +15,4 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ['id', 'name', 'description', 'price', 'category', 'category_name', 
-                  'stock_quantity', 'image_url', 'created_date']  # Include specific fields
+                  'stock_quantity', 'image_url', 'created_date']  
