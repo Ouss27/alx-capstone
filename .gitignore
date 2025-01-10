@@ -3,5 +3,8 @@ db.sqlite3
 *.pyc
 *.pyo
 *.pyd
+<<<<<<< HEAD
 .venv/
 venv/
+=======
+>>>>>>> 64efb8408f77117cac16120d30fb54790c6ba586
