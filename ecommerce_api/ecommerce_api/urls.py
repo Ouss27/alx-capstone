@@ -19,7 +19,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/accounts/', include('accounts.urls')),  # Include user management routes
     path('api/', include('products.urls')),  # Include the URLs from the products app
+    path('auth/', include('rest_framework.urls')),     # Login/Logout views for DRF browsable API
 ]
 
 
