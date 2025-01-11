@@ -1,5 +1,5 @@
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 from django.contrib.auth.models import User
 from .serializers import UserRegistrationSerializer, UserUpdateSerializer
 from rest_framework.response import Response
@@ -12,6 +12,7 @@ from rest_framework.authentication import TokenAuthentication
 class UserRegistrationView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserRegistrationSerializer
+    permission_classes = [AllowAny]  # Override permissions to allow access to all users
 
 # retrieve or update view
 class UserDetailView(generics.RetrieveUpdateAPIView):
