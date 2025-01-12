@@ -35,19 +35,19 @@ Access the application at http://127.0.0.1:8000/
 
 ## API Endpoints:
 User Endpoints:
-   Register user POST /api/accounts/register/
-   Login user POST /api/accounts/login/
-   Logout user POST /api/accounts/logout/
-   Retrieve, update user GET, PUT /api/accounts/profile/<int:pk>/
-   Admin delete user DELETE /api/accounts/delete/<int:pk>/
+   POST /api/accounts/register/ "Register user "
+   POST /api/accounts/login/ "Login user "
+   POST /api/accounts/logout/ "Logout user "
+   GET, PUT /api/accounts/profile/<int:pk>/ "Retrieve, update user "
+   DELETE /api/accounts/delete/<int:pk>/ "Admin delete user "
 Product Endpoints:
-   List, create product GET, POST /api/products/
-   Details, update, delete product GET, PUT, DELETE /api/products/<int:pk>/
-   Search product GET /api/products/search/ (name, category, price range, stock availability)
-   List product with pagination GET /api/products/list/
+   GET, POST /api/products/ "List, create product "
+   GET, PUT, DELETE /api/products/<int:pk>/ "Details, update, delete product "
+   GET /api/products/search/ "Search product  name, category, price range, stock availability"
+   GET /api/products/list/ "List product with pagination "
 Category Endpoints:
-   List, create category GET, POST  /api/categories/
-   Retrieve, update, delete category GET, PUT, DELETE /api/categories/<int:pk>/
+   GET, POST  /api/categories/ "List, create category "
+   GET, PUT, DELETE /api/categories/<int:pk>/ "Retrieve, update, delete category "
 
 ## Project structure:
 .ecommerce_api
