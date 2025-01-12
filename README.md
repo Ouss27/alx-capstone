@@ -33,4 +33,49 @@ python manage.py createsuperuser
 python manage.py runserver
 Access the application at http://127.0.0.1:8000/
 
+## API Endpoints:
+User Endpoints:
+   Register user POST /api/accounts/register/
+   Login user POST /api/accounts/login/
+   Logout user POST /api/accounts/logout/
+   Retrieve, update user GET, PUT /api/accounts/profile/<int:pk>/
+   Admin delete user DELETE /api/accounts/delete/<int:pk>/
+Product Endpoints:
+   List, create product GET, POST /api/products/
+   Details, update, delete product GET, PUT, DELETE /api/products/<int:pk>/
+   Search product GET /api/products/search/ (name, category, price range, stock availability)
+   List product with pagination GET /api/products/list/
+Category Endpoints:
+   List, create category GET, POST  /api/categories/
+   Retrieve, update, delete category GET, PUT, DELETE /api/categories/<int:pk>/
 
+## Project structure:
+.ecommerce_api
+├── accounts
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── permissions.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── ecommerce_api
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── products
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── filters.py
+    ├── models.py
+    ├── serializers.py
+    ├── tests.py
+    ├── urls.py
+    └── views.py
